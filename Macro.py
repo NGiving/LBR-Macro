@@ -146,6 +146,8 @@ class Area(str, Enum):
     CURSED_KOKKAUPUNKI = 'kokkaupunki_cursed'
     GLADE = 'dark_glade'
     BLACK_HOLE = 'black_leaf_hole'
+    DICEY_MEADOWS = 'dicey_meadows'
+    GLINTING_THICKET = 'glinting_thicket'
     PUB = 'cheese_pub'
     HOUSE = 'house'
     BIOTITE = 'biotite_forest'
@@ -177,11 +179,253 @@ class Area(str, Enum):
     HOLLOW = 'soul_zone'
     FORGE = 'soul_forge'
     FABRIC = 'fabric_universe'
+    QUARK_PORTAL = 'quark_portal'
+    QUARK_NEXUS = 'quark_nexus'
+    QUANTUM_AETHER = 'quantum_aether'
+    ASTRAL_OASIS = 'astral_oasis'
+    PLANCK_SCOPE = 'planck_scope'
+    TAPESTRY = 'dimensional_tapestry'
     HALLOWEEN = 'cursed_halloween'
     FARM_FIELD = 'farm_field'
     BUTTERFLY_FIELD = 'butterfly_field'
     VIAL = 'vial_of_life'
     DOOMED_FOREST = 'the_doomed_forest'
+    
+class Shortcut(str, Enum):
+    DRAW_HUD = 'draw_hud'
+    AFK_MODE = 'afk_mode'
+    RESOURCE_FILTER = 'resource_draw_selection'
+    HOUSE_CONSTRUCTOR = 'house_constructor'
+    TRANSCEND_SELECTED = 'transcend_card'
+    REFRESH_TRADES = 'refresh_trades'
+    DAILY_REWARDS = 'daily_rewards'
+    SCROLLS = 'scrolls'
+    COMMUNITY_LEAVES = 'community_leaves'
+    LEAFSCENSION = 'leafscension'
+    LORE = 'lore'
+    CHALLENGES = 'challenges'
+    UNIQUE_LEAVES = 'unique_leaves'
+    RELICS = 'relics'
+    TRADING = 'trading'
+    ITEMS = 'items'
+    CHESTS = 'chests'
+    PETS = 'pets'
+    PRINTERS = 'printers'
+    SUPPORTER = 'supporter_shop'
+    BOT_PANEL = 'bot_control_panel'
+    ACHIEVEMENTS = 'achievements'
+    ARTIFACTS = 'artifacts'
+    CARDS = 'cards'
+    SKINS = 'skins'
+    AREAS = 'areas'
+    STATS = 'stats'
+    MATERIALS = 'materials'
+    PRESTIGE = 'prestige'
+    BLC = 'blc'
+    MLC = 'mlc'
+    CONVERTERS = 'converters'
+    FARMING = 'farming'
+    ALCHEMY = 'alchemy'
+    BORBVENTURES = 'borbventures'
+    CRAFTING = 'crafting'
+    DICE = 'dice'
+    QUARKS = 'quarks'
+    SHOP_TOOL = 'tool_shop'
+    SHOP_BASIC = 'leaf_shop'
+    SHOP_GOLD = 'gold_shop'
+    SHOP_PLATINUM = 'platinum_shop'
+    SHOP_BISMUTH = 'bismuth_shop'
+    SHOP_COSMIC = 'cosmic_shop'
+    VOID_SHOP = 'void_shop'
+    SHOP_EXOTIC = 'exotic_shop'
+    SHOP_CELEESTIAL = 'celestial_shop'
+    SHOP_MYTHICAL = 'mythical_shop'
+    SHOP_LAVA = 'lava_shop'
+    SHOP_ICE = 'ice_shop'
+    SHOP_OBSIDIAN = 'obsidian_shop'
+    SHOP_SILICON = 'silicon_shop'
+    SHOP_BENITOITE = 'benitoite_shop'
+    SHOP_MOONSTONE = 'moonstone_shop'
+    SHOP_SAND = 'sand_shop'
+    SHOP_ANCIENT = 'ancient_shop'
+    SHOP_GEM_LEAVES = 'gem_leaves_shop'
+    SHOP_SACRED = 'sacred_shop'
+    SHOP_BIOTITE = 'biotite_shop'
+    SHOP_MALACHITE = 'malachite_shop'
+    SHOP_HEMATITE = 'hematite_shop'
+    SHOP_PLASMA = 'plasma_shop'
+    SHOP_COAL = 'coal_shop'
+    RED_SCIENCE = 'red_science'
+    GREEN_SCIENCE = 'green_science'
+    BLUE_SCIENCE = 'blue_science'
+    MAGENTA_SCIENCE = 'magenta_science'
+    ORANGE_SCIENCE = 'orange_science'
+    BLACK_SCIENCE = 'black_science'
+    STRANGE_SCIENCE = 'strange_science'
+    SHOP_SILVER_TOKEN = 'silver_token_shop'
+    SHOP_GOLD_TOKEN = 'gold_token_shop'
+    SHOP_GEMS = 'shop_gems'
+    SHOP_PRESTIGE = 'coins_shop'
+    SHOP_BLC = 'blc_shop'
+    SHOP_MLC = 'mlc_shop'
+    SHOP_MULCH = 'mulch_shop'
+    SHOP_ELECTRICAL = 'energy_electrical_shop'
+    SHOP_SOUL = 'soul_shop'
+    SHOP_EVENT = 'event_shop'
+    BLAZING_SKULL = 'artifact_blazing_skull'
+    ENCHANTED_FRUIT = 'artifact_fruit'
+    SUITCASE = 'artifact_gold_suitcase'
+    GRAV = 'artifact_gravity_ball'
+    WIND = 'artifact_wind'
+    WINGS = 'artifact_wings'
+    VORTEX = 'artifact_vortex'
+    VIOLIN = 'artifact_vital_violin'
+    LANTERN = 'artifact_lantern'
+    NATURE_ROD = 'artifact_nature_rod'
+    LE = 'artifact_leafscension_exploit'
+    ORB = 'artifact_orb'
+    SEED_BAG = 'artifact_seed_bag'    
+    CRAFT_SET_0 = 'load_craft_set_0'
+    CRAFT_SET_1 = 'load_craft_set_1'
+    CRAFT_SET_2 = 'load_craft_set_2'
+    CRAFT_SET_3 = 'load_craft_set_3'
+    CRAFT_SET_4 = 'load_craft_set_4'
+    CRAFT_SET_5 = 'load_craft_set_5'
+    CRAFT_SET_6 = 'load_craft_set_6'
+    CRAFT_SET_7 = 'load_craft_set_7'
+    LOADOUT_0 = 'load_loadout_0'
+    LOADOUT_1 = 'load_loadout_1'
+    LOADOUT_2 = 'load_loadout_2'
+    LOADOUT_3 = 'load_loadout_3'
+    LOADOUT_4 = 'load_loadout_4'
+    LOADOUT_5 = 'load_loadout_5'
+    LOADOUT_6 = 'load_loadout_6'
+    LOADOUT_7 = 'load_loadout_7'
+    
+class Hotkey:
+    HOTKEY_CODES = {
+        8: "BACKSPACE",
+        9: "TAB",
+        160: "VK_LSHIFT",
+        162: "VK_LCONTROL",
+        164: "VK_LMENU",
+        165: "VK_RMENU",
+        92: "RWIN",
+        163: "VK_RCONTROL",
+        161: "VK_RSHIFT",
+        12: "VK_NUMPAD5",
+        13: "ENTER",
+        16: "VK_SHIFT",
+        17: "VK_CONTROL",
+        18: "VK_MENU",
+        19: "VK_PAUSE",
+        20: "CAPSLOCK",
+        32: "SPACE",
+        33: "PGUP",
+        34: "PGDN",
+        35: "END",
+        36: "HOME",
+        37: "LEFT",
+        38: "UP",
+        39: "RIGHT",
+        40: "DOWN",
+        45: "INSERT",
+        46: "DELETE",
+        48: "0",
+        49: "1",
+        50: "2",
+        51: "3",
+        52: "4",
+        53: "5",
+        54: "6",
+        55: "7",
+        56: "8",
+        57: "9",
+        65: "a",
+        66: "b",
+        67: "c",
+        68: "d",
+        69: "e",
+        70: "f",
+        71: "g",
+        72: "h",
+        73: "i",
+        74: "j",
+        75: "k",
+        76: "l",
+        77: "m",
+        78: "n",
+        79: "o",
+        80: "p",
+        81: "q",
+        82: "r",
+        83: "s",
+        84: "t",
+        85: "u",
+        86: "v",
+        87: "w",
+        88: "x",
+        89: "y",
+        90: "z",
+        91: "LWIN",
+        93: "VK_APPS",
+        96: "VK_NUMPAD0",
+        97: "VK_NUMPAD1",
+        98: "VK_NUMPAD2",
+        99: "VK_NUMPAD3",
+        100: "VK_NUMPAD4",
+        101: "VK_NUMPAD5",
+        102: "VK_NUMPAD6",
+        103: "VK_NUMPAD7",
+        104: "VK_NUMPAD8",
+        105: "VK_NUMPAD9",
+        106: "VK_MULTIPLY",
+        107: "VK_ADD",
+        109: "VK_SUBTRACT",
+        110: "VK_SEPARATOR",
+        111: "VK_DIVIDE",
+        112: "F1",
+        113: "F2",
+        114: "F3",
+        115: "F4",
+        116: "F5",
+        117: "F6",
+        118: "F7",
+        119: "F8",
+        120: "F9",
+        121: "F10",
+        122: "F11",
+        123: "F12",
+        144: "NUMLOCK",
+        186: ";",
+        187: "=",
+        188: ":",
+        189: "-",
+        190: ".",
+        191: "/",
+        192: "'",
+        219: "[",
+        220: "^",
+        221: "]",
+        222: "'",
+        223: "`",
+        226: "\\"
+    }
+    
+    def __init__(self, options: dict):
+        self.settings = {}
+        for k, v in options.items():
+            if 'hotkey' == k.split('_')[0]:
+                v = int(v['value']) if bool(v['value']) else -1
+                self.settings.update({k: v})
+
+    def use(self, shortcut: Shortcut, count: int = 1, pause: float = 0.05):
+        settings_key = f'hotkey_{shortcut.value}'
+        if self.settings[settings_key] == -1:
+            raise KeyError('Missing key bind')
+        key = self.HOTKEY_CODES[self.settings[settings_key]]
+        for _ in range(count):
+            send_keys(f'{{{key} down}} {{{key} up}}', pause) 
 
 class LeafParser:
     SECRET = 'ke03m!5ng93nan7p24lyg343nml2o591'
@@ -201,7 +445,7 @@ class LeafParser:
         }
     }
     ARTIFACT_CAP = 200
-    
+
     def __init__(self) -> None:
         self.save = None
         self.options = None
@@ -226,8 +470,9 @@ class LeafParser:
         self.auto_teleport_area = None
         self.ss_kill_counter = 0
         self.gf_kill_counter = 0
+        self._load_options()
     
-    def parse_save(self):
+    def parse_save(self) -> None:
         """Loads the current save and extract game data into dicts"""
         _time = self._load_save()
         if not bool(self.last_loaded['new']):
@@ -366,10 +611,11 @@ class LeafParser:
     def get_current_auto_teleport_area(self) -> str:
         return self.auto_teleport_area
     
-    def _load_save(self) -> str:
+    def _load_options(self) -> None:
         with open(path.join(getenv('localappdata'), 'blow_the_leaves_away', 'options.dat'), 'r') as file:
             self.options = json.load(file)
-            
+        
+    def _load_save(self) -> str:
         with open(self.PATH, 'r') as encoded:
             decoded = str(b64decode(encoded.read()))[2:-43]
         
@@ -430,7 +676,7 @@ class MacroController:
             'reset_spectralseeker': (780, 400)
         }
     }
-    hotkeys = {
+    combination_hotkeys = {
         25000: ('VK_CONTROL', 'VK_SHIFT', 'VK_MENU'),
         2500: ('VK_CONTROL', 'VK_MENU'),
         1000: ('VK_SHIFT', 'VK_MENU')
@@ -441,18 +687,12 @@ class MacroController:
     }
     opening_times = {
         Rarity.COMMON: {
-            25000: 5.2,
-            2500: 0.8,
             1000: 0.5
         },
         Rarity.RARE: {
-            25000: 0,
-            2500: 0,
             1000: 0
         },
         Rarity.LEGENDARY: {
-            25000: 9.5,
-            2500: 1.0,
             1000: 0.75
         }
     }
@@ -474,6 +714,7 @@ class MacroController:
         self._win.wait('visible')
         self._win.set_focus()
         self.save_game()
+        self.hotkeys = Hotkey(self.parser.options)
         self.ff_tracker['gf'] = self.parser.gf_kill_counter
         self.ff_tracker['ss'] = self.parser.ss_kill_counter
 
@@ -524,15 +765,15 @@ class MacroController:
                 case Area.HOLLOW | Area.SINGULARITY:
                     start = time.monotonic()
                     while time.monotonic() - start < 30:
-                        self.use_violin(20, 5)
-                        send_keys('{o down} {o up}')
-                        send_keys('{, down} {, up}')
-                        self.use_violin(20, 6)
+                        self.hotkeys.use(Shortcut.VIOLIN, 20, 0.005)
+                        self.hotkeys.use(Shortcut.WIND)
+                        self.hotkeys.use(Shortcut.GRAV)
+                        self.hotkeys.use(Shortcut.VIOLIN, 20, 0.006)
                         time.sleep(1)
                 case Area.CRYPT:
                     start = time.monotonic()
                     while time.monotonic() - start < 15:
-                        send_keys('{o down} {o up}')
+                        self.hotkeys.use(Shortcut.WIND)
                         time.sleep(2)
                 case Area.GLADE | Area.FARM_FIELD | Area.VIAL:
                     # pass
@@ -542,6 +783,8 @@ class MacroController:
                     #     self.open_packs(Rarity.RARE)
                     if self.parser.get_pack_count(Rarity.LEGENDARY):
                       self.open_packs(Rarity.LEGENDARY)
+                case Area.DICEY_MEADOWS:
+                    pass
             
     def open_packs(self, rarity: Rarity, amount=0):
         """ 
@@ -553,7 +796,7 @@ class MacroController:
         if rarity not in self.parser.card_packs_drop_rarities.keys():
             raise ValueError('Invalid rarity')
         
-        send_keys('{x down} {x up}')
+        self.hotkeys.use(Shortcut.CARDS)
         self._click(self.locs['card_tabs']['packs'])
         while (transcendable := self._can_transcend(rarity)) or self.parser.get_pack_count(rarity):
             if not (bool(self.parser.get_artifact_count((Artifact.LE))) and bool(self.parser.get_artifact_count(Artifact.LANTERN))):
@@ -565,7 +808,7 @@ class MacroController:
                 self._generate_open_seq(rarity)
                 self.transcend(rarity)
                 
-        send_keys('{x down} {x up}')
+        self.hotkeys.use(Shortcut.CARDS)
     
     def trade(self):
         queue = []
@@ -575,12 +818,13 @@ class MacroController:
     def venture(self):
         pass
     
+    # FIXME: fix gf kill calc
     def kill_gf(self):
         self.goto(Area.FLAME_BRAZIER)
         start = time.monotonic()
         while time.monotonic() - start <= 18:
-            send_keys('{o down} {o up}')
-            send_keys('{, down} {, up}')
+            self.hotkeys.use(Shortcut.WIND)
+            self.hotkeys.use(Shortcut.GRAV)
             time.sleep(0.5)
             if not self._has_spawned(Boss.GREEN_FLAME):
                 break
@@ -591,8 +835,9 @@ class MacroController:
         
         self.ff_tracker['gf'] += 1
         while not self._has_spawned(Boss.SPECTRALSEEKER):
-            self.use_violin(4, 25)
+            self.hotkeys.use(Shortcut.VIOLIN, 20, 0.005)
     
+    # FIXME: fix ss kill calc
     def kill_ss(self):
         self.goto(Area.FIRE_UNIVERSE)
         card_bonus = 1 + sum([self.parser.get_card_count(rarity, Boss.SPECTRALSEEKER) for rarity in Rarity]) * 0.025
@@ -603,8 +848,8 @@ class MacroController:
         if self.ff_tracker['ss'] < max_ss:
             start = time.monotonic()
             while time.monotonic() - start <= 18:
-                send_keys('{o down} {o up}')
-                send_keys('{, down} {, up}')
+                self.hotkeys.use(Shortcut.WIND)
+                self.hotkeys.use(Shortcut.GRAV)
                 time.sleep(0.5)
                 if not self._has_spawned(Boss.SPECTRALSEEKER):
                     break
@@ -626,7 +871,7 @@ class MacroController:
             self.ff_tracker['ss'] = 0
             
         while not self._has_spawned(Boss.GREEN_FLAME):
-            self.use_violin(4, 25)
+            self.hotkeys.use(Shortcut.VIOLIN, 12, 0.005)
               
     def goto(self, dest: Area):
         """
@@ -634,7 +879,7 @@ class MacroController:
         
         :param dest: The destination to travel to
         """
-        send_keys('{v down} {v up}')
+        self.hotkeys.use(Shortcut.AREAS)
         match dest:
             case self.parser.auto_teleport_area:
                 if self.current_area_tab != 'favorite':
@@ -669,7 +914,7 @@ class MacroController:
                 self._click(self.locs['areas'][Area.FIRE_UNIVERSE])
             case _:
                 raise ValueError('Not a destination')
-        send_keys('{v down} {v up}')
+        self.hotkeys.use(Shortcut.AREAS)
          
     def save_game(self):
         """ Manually save the game through the menu and parse the save """
@@ -713,13 +958,13 @@ class MacroController:
             self._click(self.locs['card_tabs']['packs'], count=2, delay=5)
             self._click(self.locs['buttons'][f'buy_{rarity}_packs'])
             self._click(self.locs['buttons'][f'open_{rarity}_packs'])
-            send_keys('{x down} {x up}')
+            self.hotkeys.use(Shortcut.CARDS)
             time.sleep(0.5)
             self.parser.parse_save()
         else:
-            send_keys('{x down} {x up}')
+            self.hotkeys.use(Shortcut.CARDS)
             self.save_game()
-            send_keys('{x down} {x up}')
+            self.hotkeys.use(Shortcut.CARDS)
             self._click(self.locs['card_tabs']['packs'], count=2, delay=5)
                               
     def _collect_artifact(self, name: Artifact):
@@ -746,7 +991,7 @@ class MacroController:
             while time.monotonic() - start < duration:
                 if not ui_hidden:
                     ui_hidden = True
-                    send_keys('{h down} {h up}', pause=0.25)
+                    self.hotkeys.use(Shortcut.DRAW_HUD, pause=0.25)
                 
                 screen = ImageGrab.grab(bbox=(x0, y0, x1, y1))
                 screen = np.array(screen)
@@ -757,10 +1002,10 @@ class MacroController:
                     locx, locy = keypoints[0].pt
                     mouse.move((int(locx), int(locy) + y0))
                     start = time.monotonic()                        
-                send_keys('{/ down} {/ up}', pause=0.25)
+                self.use_artifact(Artifact.FRUIT, delay=250)
             
             if ui_hidden:
-                send_keys('{h down} {h up}', pause=0.25)
+                self.hotkeys.use(Shortcut.DRAW_HUD, pause=0.25)
                 ui_hidden = False
                 
             self.save_game()
@@ -790,44 +1035,18 @@ class MacroController:
             min_pack = min(temp[25-rarity_transcend-1], min_pack)
             
         min_pack = math.ceil(min(transcend_costs[51-total_transcend-1], self.parser.get_pack_count(rarity), min_pack) / 1000) * 1000
-        for k, values in self.hotkeys.items():            
+        for k, values in self.combination_hotkeys.items():            
             if (res := min_pack//k) > 0:
-                _time = self.opening_times[rarity][k] if not self.parser.options['show_reward_dialogs']['value'] else self.opening_times[rarity][k] * 1.18
+                _time = self.opening_times[rarity][1000] if not self.parser.options['show_reward_dialogs']['value'] else self.opening_times[rarity][1000] * 1.18
                 send_keys(' '.join(f'{{{v} down}}' for v in values))
                 for _ in range(res):   
                     self._click(self.locs['buttons'][f'open_{rarity.value}_packs'], delay=250)
                     if self.parser.options['show_reward_dialogs']['value']:
-                        send_keys('{x down} {x up}')
+                        self.hotkeys.use(Shortcut.CARDS)
                     time.sleep(_time)
                 min_pack -= res * k
                 send_keys(' '.join(f'{{{v} up}}' for v in values))
-                
-    def _generate_open_seq_test(self, rarity: Rarity):
-        """
-        Generate the opening subroutines needed for 25 cards of a rarity or 50 cards of any rarity to be transcendable.
-        
-        :param rarity: The rarity of the pack opened
-        """
-        min_cost = 1_000_000
-        drop_rarities = zip(self.parser.card_packs_drop_rarities[rarity]['drops'], self.parser.card_packs_drop_rarities[rarity]['count'])
-        for r, count in drop_rarities:
-            for card in self.parser.cards[r]['regular'].values():
-                if not card['locked']:
-                    min_cost = min((self.parser.cards_max[r] - card['count']) * 40 / count, min_cost)
-                    
-        min_pack = int(min(min_cost - 1000, self.parser.get_pack_count(rarity)) // 1000) * 1000
-        for k, values in self.hotkeys.items():            
-            if (res := min_pack//k) > 0:
-                _time = self.opening_times[rarity][k] if not self.parser.options['show_reward_dialogs']['value'] else self.opening_times[rarity][k] * 1.18
-                send_keys(' '.join(f'{{{v} down}}' for v in values))
-                for _ in range(res):   
-                    self._click(self.locs['buttons'][f'open_{rarity.value}_packs'], delay=250)
-                    if self.parser.options['show_reward_dialogs']['value']:
-                        send_keys('{x down} {x up}')
-                    time.sleep(_time)
-                min_pack -= res * k
-                send_keys(' '.join(f'{{{v} up}}' for v in values))
-           
+            
     @staticmethod          
     def _has_spawned(name: Boss) -> bool:
         """
@@ -848,17 +1067,6 @@ class MacroController:
         im = cv.filter2D(im, -1, kernel=kernel)
 
         return pytesseract.image_to_string(im).strip().lower() == "spawned"
-    
-    @staticmethod         
-    def use_violin(count: int=1, delay: int=50):
-        """
-        This function uses violins.
-        
-        :param count: The number of violins to use, defaults to 1
-        :param delay: The delay between each use ms, defaults to 50ms
-        """
-        for _ in range(count):
-            send_keys('{p down} {p up}', pause=delay/1000)    
     
     @staticmethod
     def _click(coords=(), button='left', count=1, delay=10):
